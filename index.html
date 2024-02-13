@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/ticketData.js" defer></script> <!-- con el defer carga de forma asincrona el js despues de analizar el html y cargar completamente el DOM-->
+    <title>TPV - POS</title>
+</head>
+<body>
+    <div id = "divHead">
+        <p id = "client">Cliente</p>
+        <p id="date"></p>
+    </div>
+    <p></p> <!-- separador entre divs -->
+
+    <div id = "divHeadTicket">
+        <p id="numTicket">numTicket</p>    
+        <p id="sumTotal">0</p>
+    </div>
+    <p></p> <!-- separador entre divs -->
+    <div id = "divTicketLines">
+        <div id="productDetails">
+            <div class="detail" id="code" placeholder="Texto por defecto">Código</div>
+            <div class="detail" id="description">Descripción</div>
+            <div class="detail" id="price">Precio</div>
+        </div>
+        <br>
+        <div id="product-line">
+            
+        </div>
+
+    </div>
+
+
+    <p></p> <!-- separador entre divs -->
+    <div id="divLineInCode">
+        <p id="textCode">Codigo Producto</p>
+        <input type="text" id="codeProduct" placeholder="Introduce el código del producto">
+        <button id="btnGrabarTicket">Grabar Ticket</button>
+    </div>
+
+
+
+    <script>
+        // Obtén el elemento input por su ID
+        var codeProductInput = document.getElementById('codeProduct');
+    
+        // Agrega un event listener para el evento "keydown"
+        codeProductInput.addEventListener('keydown', function(event) {
+            // Verifica si la tecla presionada es "Enter" (código 13)
+            if (event.key === 'Enter') {
+                // Obtiene el valor del input
+                var codigoArticuloIngresado = codeProductInput.value;
+    
+                // Llama a la función newLine con el código del artículo proporcionado por el usuario
+                newLine(codigoArticuloIngresado);
+                codeProductInput.value = '';
+            }
+        });
+    </script>
+
+</body>
+</html>

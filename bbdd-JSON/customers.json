@@ -1,0 +1,22 @@
+{
+    "customers": [
+      {
+        "id": 10001,
+        "name": "Cliente sin registrar",
+        "NIF / CIF": "",
+        "Address":""
+      },
+      {
+        "id": 10002,
+        "name": "Cliente 2",
+        "NIF / CIF": "B12344987",
+        "Address":""
+      },
+      {
+        "id": 10003,
+        "name": "Cliente 3",
+        "NIF / CIF": "33548474K",
+        "Address":""
+      }
+    ]
+  }

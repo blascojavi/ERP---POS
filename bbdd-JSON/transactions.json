@@ -1,0 +1,41 @@
+{
+    "transactions": [
+      {
+        "ticketNumber": 1,
+        "clientId": 1,
+        "products": [
+          {
+            "productId": 101,
+            "quantity": 2,
+            "priceUnit": 10.99,
+            "data":"12/02/2024",
+            "hour":"",
+            "transactionOpen":"N"
+          },
+          {
+            "productId": 102,
+            "quantity": 1,
+            "priceUnit": 15.99
+          }
+        ],
+        "total": 37.97
+      },
+      {
+        "ticketNumber": 2,
+        "clientId": 2,
+        "data":"12/02/2024",
+        "hour":"",
+        "transactionOpen":"N",
+        "products": [
+          {
+            "productId": 103,
+            "quantity": 3,
+            "priceUnit": 5.49            
+          }
+        ],
+        "total": 16.47
+      }
+      
+    ]
+  }
+  
