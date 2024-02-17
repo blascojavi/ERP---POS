@@ -9,14 +9,23 @@
 </head>
 <body>
     <div id = "divHead">
-        <p id = "client">Cliente</p>
+        <select id="client">
+            <!-- podría agregar una opción predeterminada 
+            como
+            <option value="" disabled selected>Selecciona un cliente</option>
+            pero al no hacerlo le cargamos desde el JS el primer Valor
+            que sería ticket a un cliente sin registrar            
+            -->
+            
+        </select>
         <p id="date"></p>
     </div>
     <p></p> <!-- separador entre divs -->
-
+    
     <div id = "divHeadTicket">
-        <p id="numTicket">numTicket</p>    
-        <p id="sumTotal">0</p>
+        <p id="StringTicket">Ticket: </p>
+        <p id="numTicket"></p>    
+        <p id="sumTotal">0 €</p>
     </div>
     <p></p> <!-- separador entre divs -->
     <div id = "divTicketLines">

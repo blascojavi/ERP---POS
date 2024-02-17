@@ -1,13 +1,17 @@
-#divHead {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px; /* Ajusta el margen izquierdo y derecho para que sean iguales */
+    padding: 0;
+    background-color: #f8f9fa;
+}
 
-    border: 2px solid #080808; /* Borde del cuadro */
-    padding: 10px; /* Espaciado interno del cuadro */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del cuadro */
-    width: 100%; /* Ancho del cuadro al 100% del contenedor */
-    height: auto; /* Altura automática basada en el contenido */
+#divHead, #divHeadTicket, #divTicketLines, #divLineInCode {
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    margin: 20px 0; /* Ajusta el margen superior e inferior */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #client, #date {
@@ -24,100 +28,123 @@
     color: #080808;
 }
 
-#divHeadTicket{
+#divHeadTicket {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     color: #080808;
     text-align: left;
     font-weight: bold;
-    margin-left: 0px;
-    margin-top: 0px;
+    margin-left: 0;
+    margin-top: 0;
+}
 
-    border: 2px solid #080808; /* Borde del cuadro */
-    padding: 10px; /* Espaciado interno del cuadro */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del cuadro */
-    width: 100%; /* Ancho del cuadro al 100% del contenedor */
-    height: auto; /* Altura automática basada en el contenido */
+#StringTicket {
+    margin-right: 5px;
 }
-#numTicket{
-float: left;
-margin-left: 2%;
+
+#numTicket {
+    margin: 0; /* Elimina cualquier margen por defecto que pueda afectar la alineación */
 }
-#sumTotal{
-    float: right;
-    margin-right: 3%;
+
+#sumTotal {
+    margin-left: auto; /* Mueve "sumTotal" al extremo derecho */
 }
 
 #divTicketLines {
-    border: 2px solid #080808;
+    height: 50vh;
+    border: 2px solid #ced4da;
     padding: 10px;
     box-sizing: border-box;
-    width: 100%;
-    height: 50vh; /* Altura del 50% de la pantalla */
+    overflow-y: scroll; /* Cambiado a scroll para que la barra esté siempre presente */
+
 }
-#divLineInCode{
+
+#divLineInCode {
     display: flex;
     align-items: center;
     color: #080808;
     text-align: left;
     font-weight: bold;
-    margin-left: 0px;
-    margin-top: 0px;
-
-    border: 2px solid #080808; /* Borde del cuadro */
-    padding: 10px; /* Espaciado interno del cuadro */
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total del cuadro */
-    width: 100%; /* Ancho del cuadro al 100% del contenedor */
-    height: 30px; /* Altura automática basada en el contenido */
+    min-height: 30px; /* Ajusta según sea necesario */
+    border: 2px solid #ced4da;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
-#textCode{
+.product-line {
+    display: flex;
+    flex-wrap: wrap;
+}
+#textCode {
     margin-right: 20px;
-
 }
+
 #codeProduct {
-    border: 2px solid #080808;
+    border: 2px solid #ced4da;
     padding: 10px;
     box-sizing: border-box;
     width: 250px;
     height: 30px;
 }
+
 #productDetails {
     display: flex;
-    justify-content: flex-start; /* Ajustado para que los detalles estén pegados a la izquierda */
+    justify-content: flex-start;
     align-items: center;
 }
 
 .detail {
     box-sizing: border-box;
     padding: 10px;
-    border: 2px solid #080808;
+    border: 2px solid #ced4da;
+    margin-bottom: 0.1px; /* Ajusta según tu preferencia */
 }
 
 #code {
     margin-left: 20px;
+    margin-right: -1px;
     text-align: center;
-    width: 10%; 
+    width: 10%; /* Ajusta según tu preferencia */
 }
 
 #description {
-    text-align: center;
+    text-align: left;
+    margin-right: -1px;
     text-indent: 5%;
-    width: 80%; 
+    width: 80%; /* Ajusta según tu preferencia */
 }
 
 #price {
     text-align: center;
-    width: 10%;
+    width: 10%; /* Ajusta según tu preferencia */
 }
 
 .product-line {
-    margin-top: 10px; /* O cualquier valor que desees para el espacio entre líneas */
-    justify-content: flex-start;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px; /* Asegura que el contenido no se solape con la barra de desplazamiento */
 }
 
-#btnGrabarTicket{
+#btnGrabarTicket {
     margin-left: auto;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
 
+#btnGrabarTicket:hover {
+    background-color: #0056b3;
+}
+
+.productDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 1px 0; /* Ajusta según tu preferencia */
 }
